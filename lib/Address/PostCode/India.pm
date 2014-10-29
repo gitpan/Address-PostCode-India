@@ -1,6 +1,6 @@
 package Address::PostCode::India;
 
-$Address::PostCode::India::VERSION = '0.01';
+$Address::PostCode::India::VERSION = '0.02';
 
 =head1 NAME
 
@@ -8,7 +8,7 @@ Address::PostCode::India - Interface to the India PinCode.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
@@ -71,8 +71,8 @@ offices.
 
 =head1 METHODS
 
-It returns an object of type L<Address::PostCode::UK::Place> on success. The only
-parameter requires is the post code.
+It  returns  an object of type L<Address::PostCode::India::Place> on success. The
+only parameter requires is the 6-digits pin code.
 
     use strict; use warnings;
     use Address::PostCode::India;
@@ -91,13 +91,13 @@ sub details {
     my ($self, $pin_code) = @_;
 
     die "ERROR: Missing required param 'pin code'.\n" unless defined $pin_code;
-    die "ERROR: Invalid pin code [$pin_code].\n"      unless ($pin_code =~ /^\d+$/);
+    die "ERROR: Invalid pin code [$pin_code].\n"      unless ($pin_code =~ /^\d{6}$/);
 
     my $url      = sprintf("%s?pincode=%d", $BASE_URL, $pin_code);
     my $response = $self->get($url);
     my $contents = from_json($response->{'content'});
 
-    return Address::PostCode::India::Place->new($contents);
+    return Address::PostCode::India::Place->new($contents->[0]);
 }
 
 =head1 AUTHOR
