@@ -1,5 +1,8 @@
 Revision history for Address-PostCode-India
 
+0.03  2014-10-30T19:42:00+01:00
+      - Updated pod document related to the method details().
+
 0.02  2014-10-29T20:22:14+01:00
       - Checking pin code to be exactly 6 digits.
       - Added unit test for 6 digits pin code.

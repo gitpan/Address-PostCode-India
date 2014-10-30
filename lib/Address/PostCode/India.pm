@@ -1,6 +1,6 @@
 package Address::PostCode::India;
 
-$Address::PostCode::India::VERSION = '0.02';
+$Address::PostCode::India::VERSION = '0.03';
 
 =head1 NAME
 
@@ -8,7 +8,7 @@ Address::PostCode::India - Interface to the India PinCode.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
@@ -70,6 +70,8 @@ offices.
     +-------------------------+-----------------------------+
 
 =head1 METHODS
+
+=head2 details()
 
 It  returns  an object of type L<Address::PostCode::India::Place> on success. The
 only parameter requires is the 6-digits pin code.
