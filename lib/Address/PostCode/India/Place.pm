@@ -1,6 +1,6 @@
 package Address::PostCode::India::Place;
 
-$Address::PostCode::India::Place::VERSION = '0.03';
+$Address::PostCode::India::Place::VERSION = '0.04';
 
 =head1 NAME
 
@@ -8,7 +8,7 @@ Address::PostCode::India::Place - Placeholder for 'place' for Address::PostCode:
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 

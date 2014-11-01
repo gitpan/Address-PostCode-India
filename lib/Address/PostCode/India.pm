@@ -1,6 +1,6 @@
 package Address::PostCode::India;
 
-$Address::PostCode::India::VERSION = '0.03';
+$Address::PostCode::India::VERSION = '0.04';
 
 =head1 NAME
 
@@ -8,7 +8,7 @@ Address::PostCode::India - Interface to the India PinCode.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
@@ -25,6 +25,8 @@ extends 'Address::PostCode::UserAgent';
 our $BASE_URL = 'http://getpincodes.info/api.php';
 
 =head1 DESCRIPTION
+
+The API service is provided by L<website|http://getpincodes.info/apidetail.php>.
 
 A Postal Index Number or PIN or Pincode is the post office numbering or post code
 system used by India Post, the Indian postal administration. The code is 6 digits
